@@ -1,0 +1,114 @@
+.mobile-icon:hover,
+.mobile-icon:focus {
+  fill: #2196f3;
+}
+
+.menu-open-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 15px;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: #2196f3;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  background-color: white;
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mob-menu__link {
+  @include font(500, 40px, 1.2, 0.02em);
+  color: var(--brand-color);
+}
+
+.mob-menu .mob-menu__link.mob-current {
+  color: #2196f3;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-social__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mob-menu-social__link {
+  color: #2196f3;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.menu__linked {
+  border: none;
+}
+
+.mob-menu__item-connect:not(:last-child) {
+  padding-bottom: 32px;
+}
+
+.mob-menu__link-tel {
+  @include font(500, 34px, 1.2, 0.02em);
+  color: #757575;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.mob-menu__link-mail {
+  @include font(500, 24px, 1.1, 0.02em);
+  color: #757575;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}

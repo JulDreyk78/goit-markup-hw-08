@@ -1,0 +1,227 @@
+.footers {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.footer-class {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
+}
+
+.address__logo-nav {
+  text-decoration: none;
+  color: var(--brand-color);
+  font-family: "Raleway";
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 1.1, 0.03em);
+  }
+  @include font(700, 24px, 1.1, 0.03em);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.address {
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+.address__address {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer {
+  background-color: #2f303a;
+  padding: 60px 0 60px 0;
+}
+
+.address__logo-web {
+  color: #2196f3;
+}
+
+.address__logo-studio {
+  color: #ffffff;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.address__adds {
+  color: #ffffff;
+  @include font(400, 14px, 1.1, 0.03em);
+  font-style: normal;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.address__link-mail {
+  color: #757575;
+  @include font(400, 14px, 1.7, 0.03em);
+  font-style: normal;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.address__link-tel {
+  color: #757575;
+  @include font(400, 14px, 1.7, 0.03em);
+  font-style: normal;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.address__soc-content {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.address__soc-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.address__text {
+  @include font(700, 14px, 1.1, 0.03em);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.address__soc-link {
+  border-radius: 50px;
+  @extend %align-list;
+  background: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+  width: 44px;
+  height: 44px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
+}
+
+.address__sub {
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.address__span {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.address__label {
+  display: block;
+  top: 0;
+  left: 0;
+  @include font(700, 14px, 1.1, 0.03em);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.address__input {
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 0 15px 16px;
+  color: rgb(255, 255, 255);
+  &:focus {
+    border: 1px solid #2196f3;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.address__input::placeholder {
+  @extend %align-list;
+  @include font(400, 16px, 1.2, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address__btn {
+  @extend %align-list;
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  @include font(700, 16px, 1.8, 0.06em);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.address__icon-plane {
+  margin-left: 10px;
+}
